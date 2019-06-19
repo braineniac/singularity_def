@@ -1,0 +1,24 @@
+Bootstrap: docker
+From: osrf/ros:melodic-desktop-full
+
+%help
+ROS melodic full desktop container
+
+%labels
+Author braineniac@protonmail.com
+Version v0.0.1
+
+%environment
+		export ROS_WORKSPACE=$HOME/ws/ros
+		export ROS_LOG_DIR=$ROS_WORKSPACE/log
+		export ROS_HOME=$ROS_WORKSPACE
+
+%post
+		apt update -y && apt upgrade -y
+    apt install sudo vim zsh python-pip python3-pip python3-tk python-tk -y
+
+		#install zsh
+		apt install zsh -y
+		chsh -s /bin/zsh
+
+%setup
