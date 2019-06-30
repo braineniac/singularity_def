@@ -14,11 +14,19 @@ Version v0.0.1
 		export ROS_HOME=$ROS_WORKSPACE
 
 %post
+		# full system update
 		apt update -y && apt upgrade -y
-    apt install sudo vim zsh python-pip python3-pip python3-tk python-tk -y
+    
+		# basic python packages
+		apt install sudo vim zsh python-pip python3-pip python3-tk python-tk -y
 
-		#install zsh
-		apt install zsh -y
+		# ROS python packages
+		apt install python-rosinstall python-rosinstall-generator python-wstool build-essential python-catkin-tools -y
+
+		# ROS other melodic packages
+		apt install ros-melodic-joy  ros-melodic-usb-cam ros-melodic-robot-localization -y 
+		
+		#switch to zsh
 		chsh -s /bin/zsh
 
 %setup
