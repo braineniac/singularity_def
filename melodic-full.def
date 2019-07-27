@@ -29,4 +29,7 @@ Version v0.0.1
 		#switch to zsh
 		chsh -s /bin/zsh
 
+		# install pip packages
+		pip install evo
+
 %setup
