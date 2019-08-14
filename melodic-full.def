@@ -1,5 +1,5 @@
 Bootstrap: docker
-From: osrf/ros:kinetic-desktop-full
+From: osrf/ros:melodic-desktop-full
 
 %help
 ROS melodic full desktop container
@@ -18,13 +18,13 @@ Version v0.0.1
 		apt update -y && apt upgrade -y
     
 		# basic python packages
-		apt install sudo vim zsh python-pip python3-pip python3-tk python-tk python-numpy python-matplotlib python-pandas -y
+		apt install sudo vim zsh python-pip python3-pip python3-tk python-tk python-numpy python-matplotlib python-pandas python-qt4 -y
 
 		# ROS python packages
 		apt install python-rosinstall python-rosinstall-generator python-wstool build-essential python-catkin-tools -y
 
 		# ROS other melodic packages
-		apt install ros-kinetic-joy  ros-kinetic-usb-cam ros-kinetic-robot-localization ros-kinetic-imu-transformer ros-kinetic-urdf-sim-tutorial ros-kinetic-rosserial-arduino ros-kinetic-rosserial -y 
+		apt install ros-melodic-joy  ros-melodic-usb-cam ros-melodic-robot-localization ros-melodic-imu-transformer ros-melodic-urdf-sim-tutorial ros-melodic-rosserial-arduino ros-melodic-rosserial -y 
 		
 		#switch to zsh
 		chsh -s /bin/zsh
